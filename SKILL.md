@@ -1,6 +1,6 @@
 ---
 name: code-diet
-description: Scan codebase for duplication, dead code, and abstraction opportunities — then propose minimal shared extractions following composition-over-inheritance principles
+description: "code, diet, codebase, scan, dead, find, duplicate, 找重複程式碼, 清理冗餘, 抽共用邏輯, 找沒用到的函式"
 allowed-tools: Agent Bash Read Write Edit Grep Glob
 io:
   input:
@@ -9,6 +9,7 @@ io:
   output:
     - mime: "text/markdown"
       description: "Diet report with findings, recommendations, and action items"
+disable-model-invocation: true
 ---
 
 # Code Diet — Periodic Codebase Slimming
