@@ -6,7 +6,7 @@ Scan the codebase for duplication, dead code, and abstraction opportunities — 
 
 ## Description
 
-Code Diet runs three parallel scans across the Workshop codebase to find near-identical logic across modules, unused functions and imports, and places where modules solve the same problem differently. It applies a strict four-question decision framework before recommending any extraction to shared code, ensuring that only patterns with two or more confirmed consumers ever move to `shared/`. The output is a prioritized diet report saved to `~/workshop/outputs/code-diet/`.
+Code Diet runs three parallel scans across the Workshop codebase to find near-identical logic across modules, unused functions and imports, and places where modules solve the same problem differently. It applies a strict four-question decision framework before recommending any extraction to shared code, ensuring that only patterns with two or more confirmed consumers ever move to `shared/`. The output is a prioritized diet report saved to `~/.claude/outputs/code-diet/`.
 
 ## Features
 
@@ -35,12 +35,12 @@ Examples:
 
 ## How It Works
 
-Code Diet spawns three parallel explorer agents targeting duplication, dead code, and pattern divergence respectively. A plan agent then applies the four-question framework to each finding, producing a classified and prioritized list. The final report is written to `~/workshop/outputs/code-diet/` and persisted as an intelflow report. Execution of proposed changes is intentionally left to the developer — the skill proposes, humans decide.
+Code Diet spawns three parallel explorer agents targeting duplication, dead code, and pattern divergence respectively. A plan agent then applies the four-question framework to each finding, producing a classified and prioritized list. The final report is written to `~/.claude/outputs/code-diet/` and persisted as an intelflow report. Execution of proposed changes is intentionally left to the developer — the skill proposes, humans decide.
 
 ## Requirements
 
 - Claude Code CLI
-- Workshop intelflow CLI (`~/.local/bin/python3 ~/workshop/core/cli/intelflow.py`)
+- *(optional)* A report store CLI, if you keep one. Without it the report is simply left on disk.
 - Access to `core/src/` and optionally `stations/`, `mcp/`, `libs/`
 
 ## License

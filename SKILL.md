@@ -103,7 +103,7 @@ All 4 YES → extract to shared/
 
 ## Phase 4: PROPOSE — Generate Report
 
-Output format (save to `~/workshop/outputs/code-diet/`):
+Output format (save to `~/.claude/outputs/code-diet/`):
 
 ```markdown
 # Code Diet Report — {date}
@@ -135,7 +135,9 @@ Output format (save to `~/workshop/outputs/code-diet/`):
 ## Phase 5: RECORD — Store Results
 
 ```bash
-~/.local/bin/python3 ~/workshop/core/cli/intelflow.py --json reports create \
+# Optional: file the report into a report store, if you run one.
+# Skip this block entirely when you do not - the report already exists on disk.
+# <your-report-cli> --json reports create \
   --title "Code Diet Report: {date}" \
   --query "code duplication shared layer" \
   --skill "code-diet" \
